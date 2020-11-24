@@ -1,5 +1,7 @@
 # Práctica para curso avanzado de Angular
 
+ALUMNO: JESUS FERNANDEZ JODAR
+
 ## Requerimientos funcionales
 
 Explorar la información abierta y disponible en el [API del Banco Mundial](https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures).
