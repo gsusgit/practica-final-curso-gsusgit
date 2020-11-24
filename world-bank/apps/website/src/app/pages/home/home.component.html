@@ -1,0 +1,6 @@
+<div *ngIf="continentes">
+    <ul>
+        <li *ngFor="let continente of continentes">{{continente.name}} -
+            <a style="text-decoration: underline; cursor: pointer;" (click)="verRegion(continente.code)">{{continente.code}}</a></li>
+    </ul>
+</div>

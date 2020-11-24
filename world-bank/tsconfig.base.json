@@ -16,7 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@world-bank/shared/data": ["libs/shared/data/src/index.ts"]
+      "@world-bank/shared/data": ["libs/shared/data/src/index.ts"],
+      "@world-bank/shared/models/continente": [
+        "libs/shared/models/continente/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

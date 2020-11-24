@@ -1,0 +1,6 @@
+<div *ngIf="paises">
+    <ul>
+        <li *ngFor="let pais of paises">{{pais.name}} -
+            <a style="text-decoration: underline; cursor: pointer;" (click)="verPais(pais.id)">{{pais.id}}</a></li>
+    </ul>
+</div>
