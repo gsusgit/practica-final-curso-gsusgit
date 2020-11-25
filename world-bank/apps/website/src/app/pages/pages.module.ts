@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
-import { RegionComponent } from './region/region.component';
 import { PaisComponent } from './pais/pais.component';
-import { PipesModule } from './pipes/pipes.module';
+import { PipesModule } from '../pipes/pipes.module';
+import { ContinenteComponent } from './continente/continente.component';
 
 @NgModule({
-  declarations: [HomeComponent, RegionComponent, PaisComponent],
+  declarations: [HomeComponent, PaisComponent, ContinenteComponent],
   imports: [
     CommonModule,
     PipesModule
   ],
-  exports: [HomeComponent, RegionComponent, PaisComponent]
+  exports: [HomeComponent, PaisComponent, ContinenteComponent]
 })
 export class PagesModule { }

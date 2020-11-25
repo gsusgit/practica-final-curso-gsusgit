@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WorldBankService } from '@world-bank/shared/data';
-import { Region } from '../../../../../../libs/shared/models/continente/src/lib/region.model';
+import { Continente } from '@world-bank/continente';
 
 @Component({
-  selector: 'wb-website-region',
-  templateUrl: './region.component.html',
+  selector: 'wb-website-continente',
+  templateUrl: './continente.component.html',
   styles: [
   ]
 })
-export class RegionComponent implements OnInit {
+export class ContinenteComponent implements OnInit {
 
-  region:Region[] = [];
+  continente:Continente[] = [];
   paises = [];
   cargando = true;
 
@@ -21,9 +21,9 @@ export class RegionComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.wbs.obtenerInfoRegion$(params.id).subscribe(resp => {
         console.log(resp);
-        this.region = resp;
-        for (let i = 0; i < this.region.length; i++) {
-          const pais = this.region[i];
+        this.continente = resp;
+        for (let i = 0; i < this.continente.length; i++) {
+          const pais = this.continente[i];
           this.paises.push(pais);
           setTimeout(() => {
             this.cargando = false;

@@ -17,8 +17,11 @@
     "baseUrl": ".",
     "paths": {
       "@world-bank/shared/data": ["libs/shared/data/src/index.ts"],
-      "@world-bank/shared/models/continente": [
-        "libs/shared/models/continente/src/index.ts"
+      "@world-bank/continente": [
+        "libs/shared/models/interfaces/src/lib/continente.model.ts"
+      ],
+      "@world-bank/pais": [
+        "libs/shared/models/interfaces/src/lib/pais.model.ts"
       ]
     }
   },

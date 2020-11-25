@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WorldBankService } from '@world-bank/shared/data';
-import { Pais } from '../../../../../../libs/shared/models/continente/src/lib/pais.model';
+import { Pais } from '@world-bank/pais';
 
 @Component({
   selector: 'wb-website-pais',
@@ -30,7 +30,7 @@ export class PaisComponent implements OnInit {
   }
 
   navegarARegion(id:string) {
-    this.router.navigate(['/region', id]);
+    this.router.navigate(['/continente', id]);
   }
 
 }

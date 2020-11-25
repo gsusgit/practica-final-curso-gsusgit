@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorldBankService } from '@world-bank/shared/data';
-import { Continente } from '../../../../../../libs/shared/models/continente/src/lib/continente.model';
+import { Continente } from '@world-bank/continente';
 import { Router } from '@angular/router';
 
 @Component({
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
   }
 
   verRegion(id: string) {
-    this.router.navigate(['/region', id]);
+    this.router.navigate(['/continente', id]);
   }
 
 }

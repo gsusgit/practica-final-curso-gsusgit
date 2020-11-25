@@ -1,13 +1,10 @@
-import { getGreeting } from '../support/app.po';
+import { cargaRegiones } from '../support/app.po';
 
-describe('website', () => {
+describe('GIVEN: the website', () => {
   beforeEach(() => cy.visit('/'));
-
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to website!');
+  context('WHEN: user visits home page', () => {
+  it('THEN: should display the regions', () => {
+    cargaRegiones();
   });
-});
+  });
+ });
