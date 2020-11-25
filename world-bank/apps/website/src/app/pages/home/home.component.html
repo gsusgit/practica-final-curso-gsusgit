@@ -3,9 +3,8 @@
 </div>
 
 <div *ngIf="!cargando">
-    <h3 class="text-center mb-3">Select a region</h3>
-    <div class="row row-cols-1 row-cols-md-4">
-        <div id="continentes" class="col mb-3" *ngFor="let continente of continentes; let i = index;" (click)="verRegion(continente.code)">
+    <div id="continentes" class="row row-cols-1 row-cols-md-4">
+        <div class="col mb-3" *ngFor="let continente of continentes; let i = index;" (click)="verRegion(continente.code)">
             <div class="card h-100 link">
                 <img [src]="imagenes[continente.id]" class="card-img-top" [alt]="continente.id">
                 <div class="card-body">
