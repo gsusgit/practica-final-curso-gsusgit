@@ -20,6 +20,6 @@ import { FooterComponent } from './shared/footer/footer/footer.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [NavbarComponent, FooterComponent],
+  exports: [NavbarComponent, FooterComponent, DataModule],
 })
 export class AppModule {}

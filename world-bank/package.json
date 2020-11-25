@@ -9,7 +9,7 @@
         "start:website": "ng serve website --port=4201 -o",
         "build": "ng build",
         "test:website": "ng test website --watch --verbose",
-        "test:data": "ng test data --watch --verbose",
+        "test:data": "ng test shared-data --watch --verbose",
         "lint": "nx workspace-lint && ng lint",
         "e2e:website": "ng e2e website-e2e --watch",
         "affected:apps": "nx affected:apps",
