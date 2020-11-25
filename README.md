@@ -9,29 +9,29 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 ### Home page
 
-- Ver regiones geográficas continentales:
+- Ver regiones geográficas continentales: :heavy_check_mark:
 
-- A partir de : http://api.worldbank.org/v2/region/?format=json
+- A partir de : http://api.worldbank.org/v2/region/?format=json :heavy_check_mark:
 
-- Filtrando para ver aquellas que tengan `id` numérico
+- Filtrando para ver aquellas que tengan `id` numérico :heavy_check_mark:
 
-- Navegar hacia la página de una región: `region/:code`
+- Navegar hacia la página de una región: `region/:code` :heavy_check_mark:
 
 ### Página para una región continental
 
-- Ver los datos básicos del continente y los países pertenecientes.
+- Ver los datos básicos del continente y los países pertenecientes. :heavy_check_mark:
 
-- A partir de : http://api.worldbank.org/v2/region/ECS/country?per_page=1000&format=json
+- A partir de : http://api.worldbank.org/v2/region/ECS/country?per_page=1000&format=json :heavy_check_mark:
 
-- Navegar hacia la página de un país: `country/:id`
+- Navegar hacia la página de un país: `country/:id` :heavy_check_mark:
 
 ### Página para un país
 
-- Ver los datos básicos de un país
+- Ver los datos básicos de un país :heavy_check_mark:
 
-- A partir de : http://api.worldbank.org/V2/country/ESP?format=json
+- A partir de : http://api.worldbank.org/V2/country/ESP?format=json :heavy_check_mark:
 
-- Navegar hacia su región continental : `region/:code`
+- Navegar hacia su región continental : `region/:code` :heavy_check_mark:
 
 ---
 
@@ -39,11 +39,11 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 ## Mínimo
 
-- Mono repositorio generado con las herramientas de [Nx.dev](https://nx.dev/angular)
+- Mono repositorio generado con las herramientas de [Nx.dev](https://nx.dev/angular) :heavy_check_mark:
 
-- AL menos una aplicación y una librería
+- AL menos una aplicación y una librería :heavy_check_mark:
 
-- Testing unitario de al menos un componente y un servicio
+- Testing unitario de al menos un componente y un servicio :heavy_check_mark:
 
 - Testing _e2e_ de una página
 
