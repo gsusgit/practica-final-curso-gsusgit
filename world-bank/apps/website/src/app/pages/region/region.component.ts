@@ -13,16 +13,21 @@ export class RegionComponent implements OnInit {
 
   region:Region[] = [];
   paises = [];
+  cargando = true;
 
   constructor(private activatedRoute: ActivatedRoute, private wbs: WorldBankService, private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.wbs.obtenerInfoRegion$(params.id).subscribe(resp => {
+        console.log(resp);
         this.region = resp;
         for (let i = 0; i < this.region.length; i++) {
           const pais = this.region[i];
           this.paises.push(pais);
+          setTimeout(() => {
+            this.cargando = false;
+          }, 1500);
         }
       });
     });

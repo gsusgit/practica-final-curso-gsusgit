@@ -6,9 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { DataModule } from '@world-bank/shared/data';
 import { HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,6 +20,6 @@ import { PagesModule } from './pages/pages.module';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [],
+  exports: [NavbarComponent, FooterComponent],
 })
 export class AppModule {}

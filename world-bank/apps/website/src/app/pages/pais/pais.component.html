@@ -1,12 +1,17 @@
-<div>
-    <ul>
-        <li>Name: {{pais.name}}</li>
-        <li>ISO Code: {{pais.iso2Code}}</li>
-        <li>Region: {{pais.region.value}}</li>
-        <li>Income level: {{pais.incomeLevel.value}}</li>
-        <li>Capital: {{pais.capitalCity}}</li>
-        <li>Longitud: {{pais.longitude}}</li>
-        <li>Latitude: {{pais.latitude}}</li>
-    </ul>
+<div *ngIf="cargando" class="spinner-grow" role="status">
+    <span class="sr-only">Loading...</span>
+</div>
 
+<div *ngIf="!cargando" class="row">
+    <div class="col-md-6">
+        <h1 class="pais-title">{{ pais.name }}</h1>
+        <br>
+        <p>ISO Code: {{ pais.iso2Code }}</p>
+        <p>Region: <a class="badge badge-danger link" (click)="navegarARegion(pais.region.id)">{{ pais.region.value }}</a></p>
+        <p>Income level: {{ pais.incomeLevel.value }}</p>
+        <p>Capital: {{ pais.capitalCity }}</p>
+    </div>
+    <div class="col-md-6">
+        <iframe [src]="mapSrc | domseguro" width="100%" height="270" frameborder="0" style="border: 0"></iframe>
+    </div>
 </div>

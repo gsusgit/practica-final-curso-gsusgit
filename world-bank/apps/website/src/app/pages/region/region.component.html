@@ -1,6 +1,11 @@
-<div *ngIf="paises">
-    <ul>
-        <li *ngFor="let pais of paises">{{pais.name}} -
-            <a style="text-decoration: underline; cursor: pointer;" (click)="verPais(pais.id)">{{pais.id}}</a></li>
-    </ul>
+<div *ngIf="cargando" class="spinner-grow" role="status">
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div *ngIf="!cargando" class="text-center">
+    <h1 class="mb-3">{{paises[0].region.value}}</h1>
+    <button *ngFor="let pais of paises" class="btn btn-outline-dark tag btn-sm m-1" (click)="verPais(pais.id)">{{pais.name}}</button>
+    <div clas="text-center mt-5">
+        <a href="/home"><i class="lni lni-world-alt world"></i></a>
+    </div>
 </div>
