@@ -20,7 +20,6 @@ export class ContinenteComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.wbs.obtenerInfoRegion$(params.id).subscribe(resp => {
-        console.log(resp);
         this.continente = resp;
         for (let i = 0; i < this.continente.length; i++) {
           const pais = this.continente[i];

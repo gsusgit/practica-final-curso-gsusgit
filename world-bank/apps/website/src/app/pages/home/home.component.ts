@@ -1,18 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { WorldBankService } from '@world-bank/shared/data';
 import { Continente } from '@world-bank/continente';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'wb-website-home',
   templateUrl: './home.component.html',
   styles: [
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
 
+  public regions$ = this.wbs.obtenerRegionesContinentales$();
   continentes:Continente[] = [];
-  cargando = true;
   imagenes = {
     1: '../../../assets/1.jpg',
     2: '../../../assets/2.jpg',
@@ -27,13 +29,7 @@ export class HomeComponent implements OnInit {
   }
 
   constructor(private wbs: WorldBankService, private router: Router) {
-    this.wbs.obtenerRegionesContinentales$()
-    .subscribe(resp => {
-      this.continentes = resp;
-      setTimeout(() => {
-        this.cargando = false;
-      }, 1500);
-    });
+
   }
 
   verRegion(id: string) {

@@ -39,15 +39,15 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 ## Mínimo
 
-- Mono repositorio generado con las herramientas de [Nx.dev](https://nx.dev/angular) ** _workspace:world-bank_ ** :heavy_check_mark:
+- Mono repositorio generado con las herramientas de [Nx.dev](https://nx.dev/angular) :heavy_check_mark: (** _workspace:world-bank_ **)
 
 - AL menos una aplicación y una librería ** _app:website_ **, ** _lib:data_ ** :heavy_check_mark:
 
-- Testing unitario de al menos un componente y un servicio ** _componente:app.component.spec.ts_ **, ** _servicio:world-bank-service.spec_ ** :heavy_check_mark:
+- Testing unitario de al menos un componente y un servicio :heavy_check_mark: (** _componente:app.component.spec.ts_ **, ** _servicio:world-bank-service.spec_ **)
 
-- Testing _e2e_ de una página ** _home_ ** :heavy_check_mark:
+- Testing _e2e_ de una página :heavy_check_mark: (** _home_ **)
 
-- Uso de la estrategia de detección de cambios **_OnPush_**.
+- Uso de la estrategia de detección de cambios **_OnPush_**. :heavy_check_mark: (** _home.component.ts_ **)
 
 - Uso del patrón _Container Presenter_.
 
