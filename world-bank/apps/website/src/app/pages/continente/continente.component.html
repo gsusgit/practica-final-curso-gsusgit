@@ -5,7 +5,8 @@
 <div *ngIf="!cargando" class="text-center">
     <h1 class="mb-3">{{paises[0].region.value}}</h1>
     <button *ngFor="let pais of paises" class="btn btn-outline-dark tag btn-sm m-1" (click)="verPais(pais.id)">{{pais.name}}</button>
-    <div clas="text-center mt-5">
-        <a href="/home"><i class="lni lni-world-alt world"></i></a>
-    </div>
 </div>
+
+<wb-website-navigation-template *ngIf="!cargando">
+    <a class="btn btn-dark btn-lg page" href="/home"><i class="lni lni-chevron-left"></i> Go back</a>
+</wb-website-navigation-template>

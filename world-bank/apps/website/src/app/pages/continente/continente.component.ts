@@ -24,12 +24,25 @@ export class ContinenteComponent implements OnInit {
         for (let i = 0; i < this.continente.length; i++) {
           const pais = this.continente[i];
           this.paises.push(pais);
-          setTimeout(() => {
-            this.cargando = false;
-          }, 1500);
         }
+        this.paises.sort(this.ordenarPaises);
+        setTimeout(() => {
+          this.cargando = false;
+        }, 1500);
       });
     });
+  }
+
+  ordenarPaises(a, b) {
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
   }
 
   verPais(id: string) {

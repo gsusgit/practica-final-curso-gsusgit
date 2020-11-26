@@ -4,14 +4,18 @@
 
 <div *ngIf="!cargando" class="row">
     <div class="col-md-6">
-        <h1 class="pais-title">{{ pais.name }}</h1>
-        <br>
-        <p>ISO Code: {{ pais.iso2Code }}</p>
-        <p>Region: <a class="badge badge-danger link" (click)="navegarARegion(pais.region.id)">{{ pais.region.value }}</a></p>
-        <p>Income level: {{ pais.incomeLevel.value }}</p>
-        <p>Capital: {{ pais.capitalCity }}</p>
-    </div>
-    <div class="col-md-6">
         <iframe [src]="mapSrc | domseguro" width="100%" height="270" frameborder="0" style="border: 0"></iframe>
     </div>
+    <div class="col-md-6">
+        <h1 class="pais-title">{{ pais.name }}</h1>
+        <br>
+        <h4><span class="countrie-property">ISO Code</span> {{ pais.iso2Code }}</h4>
+        <h4><span class="countrie-property">Region</span> {{ pais.region.value }}</h4>
+        <h4><span class="countrie-property">Income level</span> {{ pais.incomeLevel.value }}</h4>
+        <h4><span class="countrie-property">Capital</span> {{ pais.capitalCity }}</h4>
+    </div>
 </div>
+
+<wb-website-navigation-template *ngIf="!cargando">
+    <a class="btn btn-dark btn-lg page" (click)="navegarARegion(pais.region.id)"><i class="lni lni-chevron-left"></i> Go back</a>
+</wb-website-navigation-template>

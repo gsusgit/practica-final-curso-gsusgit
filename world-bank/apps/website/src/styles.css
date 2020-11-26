@@ -85,3 +85,8 @@ body {
 .card-body {
     padding: .25rem;
 }
+
+.countrie-property {
+    font-weight: 100;
+    border-bottom: 1px dashed;
+}
