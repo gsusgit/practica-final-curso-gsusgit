@@ -55,7 +55,7 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 - Almacén centralizado del estado mediante **_NgRx_**.
 
-- Características **_PWA_**
+- Características **_PWA_** :heavy_check_mark:
 
 - Traducible
 
