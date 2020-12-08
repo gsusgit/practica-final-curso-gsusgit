@@ -57,7 +57,7 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 - Características **_PWA_** :heavy_check_mark:
 
-- Traducible
+- Traducible :heavy_check_mark:
 
 ## Extra
 

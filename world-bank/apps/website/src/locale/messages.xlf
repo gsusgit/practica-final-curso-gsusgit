@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5c246f91bfcc7deb488adb23878699f932167b3c" datatype="html">
+        <source>ISO Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/pais/pais.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2ae797460f17fe72086256ec5e2da35ddc6e1614" datatype="html">
+        <source>Region</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/pais/pais.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c45a590602ca0868d6e2af5d4115c988446d21da" datatype="html">
+        <source>Income level</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/pais/pais.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a67aec1c4d47cdf3a4442a19e616def78fd77388" datatype="html">
+        <source>Go back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/pais/pais.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/continente/continente.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ae0b5be5be819f2cd6c2667915c3a67325de8834" datatype="html">
+        <source>Made with </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/footer/footer/footer.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2ece6d939db9540f4c191264cca196bd8e8859cc" datatype="html">
+        <source>for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/footer/footer/footer.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

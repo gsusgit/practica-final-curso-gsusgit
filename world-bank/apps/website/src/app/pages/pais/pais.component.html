@@ -9,13 +9,13 @@
     <div class="col-md-6">
         <h1 class="pais-title">{{ pais.name }}</h1>
         <br>
-        <h4><span class="countrie-property">ISO Code</span> {{ pais.iso2Code }}</h4>
-        <h4><span class="countrie-property">Region</span> {{ pais.region.value }}</h4>
-        <h4><span class="countrie-property">Income level</span> {{ pais.incomeLevel.value }}</h4>
+        <h4><span class="countrie-property" i18n>ISO Code</span> {{ pais.iso2Code }}</h4>
+        <h4><span class="countrie-property" i18n>Region</span> {{ pais.region.value }}</h4>
+        <h4><span class="countrie-property" i18n>Income level</span> {{ pais.incomeLevel.value }}</h4>
         <h4><span class="countrie-property">Capital</span> {{ pais.capitalCity }}</h4>
     </div>
 </div>
 
 <wb-website-navigation-template *ngIf="!cargando">
-    <a class="btn btn-dark btn-lg page" (click)="navegarARegion(pais.region.id)"><i class="lni lni-chevron-left"></i> Go back</a>
+    <a class="btn btn-dark btn-lg page" (click)="navegarARegion(pais.region.id)"><i class="lni lni-chevron-left"></i> <span i18n>Go back</span></a>
 </wb-website-navigation-template>
