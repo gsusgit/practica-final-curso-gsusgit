@@ -61,7 +61,7 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 ## Extra
 
-- Una landing page _SEO friendly_ generada con **_SSR_** que muestre la lista de continentes.
+- Una landing page _SEO friendly_ generada con **_SSR_** que muestre la lista de continentes. :heavy_check_mark:
 
 - Un _**WebComponent**_ con datos de un según su código. `<wbde-country id="ESP"></wbde-country>`
 
