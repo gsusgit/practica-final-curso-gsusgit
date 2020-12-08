@@ -67,3 +67,7 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 - Una aplicación web estándar (sin Angular) que use el anterior componente.
 
+
+## Añadido por alumno
+
+- Pipe personalizado **_domseguro_** para carga de urls externas que hacen que se muestre un mapa de Google para cada país seleccionado.
