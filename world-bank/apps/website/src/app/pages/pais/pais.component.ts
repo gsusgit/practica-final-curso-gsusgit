@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WorldBankService } from '@world-bank/shared/data';
 import { Pais } from '@world-bank/pais';
-import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'wb-website-pais',
@@ -12,21 +11,17 @@ import { LocationStrategy } from '@angular/common';
 })
 export class PaisComponent implements OnInit {
 
-  public language = '';
   pais:Pais;
   mapSrc:string;
   cargando = true;
 
-  constructor(private activatedRoute: ActivatedRoute, private wbs: WorldBankService, private router: Router, private url:LocationStrategy) {
-    
+  constructor(private activatedRoute: ActivatedRoute, private wbs: WorldBankService, private router: Router) {
+
   }
 
   ngOnInit(): void {
-    if (this.url.path().includes('/es/')) {
-      this.language = '/es/'; 
-    }
     this.activatedRoute.params.subscribe(params => {
-      this.wbs.obtenerInfoPais$(params.id, this.language).subscribe(resp => {
+      this.wbs.obtenerInfoPais$(params.id).subscribe(resp => {
         this.pais = resp[0];
         this.mapSrc = `https://maps.google.com/maps?q=${this.pais.latitude},${this.pais.longitude}&z=4&output=embed`;
         setTimeout(() => {
