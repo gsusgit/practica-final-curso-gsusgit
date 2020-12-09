@@ -1,0 +1,22 @@
+<div class="m-3">
+
+    <h3>Get country info</h3>
+
+    <form class="form-inline">
+        <div class="form-group mb-3">
+            <label for="codigo">ISO CODE: </label>
+            <input type="text" class="form-control ml-1" id="codigo" placeholder="Enter ISO Code" name="code" [(ngModel)]="code">
+        </div>
+        <button type="submit" class="btn btn-dark mb-2" style="margin-left: 5px;margin-top: -9px;" (click)="infoCountry()">
+       Get data
+    </button>
+    </form>
+
+    <div *ngIf="loading" class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    <pre *ngIf="!loading && success" style="background:royalblue;color:greenyellow;padding: 10px;">{{pais|json}}</pre>
+
+    <pre *ngIf="error" style="background:red;color:white;padding: 10px;">ERROR: ISO Code not valid</pre>
+</div>

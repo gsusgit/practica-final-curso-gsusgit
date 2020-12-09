@@ -63,9 +63,9 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 - Una landing page _SEO friendly_ generada con **_SSR_** que muestre la lista de continentes. :heavy_check_mark:
 
-- Un _**WebComponent**_ con datos de un según su código. `<wbde-country id="ESP"></wbde-country>`
+- Un _**WebComponent**_ con datos de un según su código. `<wbde-country id="ESP"></wbde-country>` [ _WebComponent-CountryComponent_ ] :heavy_check_mark:
 
-- Una aplicación web estándar (sin Angular) que use el anterior componente.
+- Una aplicación web estándar (sin Angular) que use el anterior componente.  [ _Apps/Vanilla/index.html_ ] :heavy_check_mark:
 
 
 ## Añadido por alumno

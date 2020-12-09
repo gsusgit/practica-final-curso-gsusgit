@@ -35,6 +35,13 @@
     },
     "shared-models-continente": {
       "tags": []
+    },
+    "web-component": {
+      "tags": []
+    },
+    "web-component-e2e": {
+      "tags": [],
+      "implicitDependencies": ["web-component"]
     }
   }
 }
