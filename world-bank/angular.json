@@ -60,7 +60,7 @@
                         "production-es": {
                             "fileReplacements": [{
                                 "replace": "apps/website/src/environments/environment.ts",
-                                "with": "apps/website/src/environments/environment.prod.ts"
+                                "with": "apps/website/src/environments/environment.prod.es.ts"
                             }],
                             "outputPath": "dist/apps/website/es/",
                             "i18nFile": "apps/website/src/locale/messages.es.xlf",

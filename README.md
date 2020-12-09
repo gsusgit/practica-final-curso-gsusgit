@@ -71,3 +71,7 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 ## Añadido por alumno
 
 - Pipe personalizado **_domseguro_** para carga de urls externas que hacen que se muestre un mapa de Google para cada país seleccionado.
+
+- Iframe que muestra mapa con ubicación aproximada del país
+
+- Bootstrap + Diseño Responsive

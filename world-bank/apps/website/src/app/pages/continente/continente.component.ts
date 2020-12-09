@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WorldBankService } from '@world-bank/shared/data';
 import { Continente } from '@world-bank/continente';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'wb-website-continente',
@@ -11,15 +12,19 @@ import { Continente } from '@world-bank/continente';
 })
 export class ContinenteComponent implements OnInit {
 
+  public language = '';
   continente:Continente[] = [];
   paises = [];
   cargando = true;
 
-  constructor(private activatedRoute: ActivatedRoute, private wbs: WorldBankService, private router: Router) { }
+  constructor(private activatedRoute: ActivatedRoute, private wbs: WorldBankService, private router: Router, private url:LocationStrategy) { }
 
   ngOnInit(): void {
+    if (this.url.path().includes('/es/')) {
+      this.language = '/es/'; 
+    }
     this.activatedRoute.params.subscribe(params => {
-      this.wbs.obtenerInfoRegion$(params.id).subscribe(resp => {
+      this.wbs.obtenerInfoRegion$(params.id, this.language).subscribe(resp => {
         this.continente = resp;
         for (let i = 0; i < this.continente.length; i++) {
           const pais = this.continente[i];

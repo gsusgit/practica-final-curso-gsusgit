@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { WorldBankService } from '@world-bank/shared/data';
 import { Continente } from '@world-bank/continente';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'wb-website-home',
@@ -13,8 +13,10 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  public regions$ = this.wbs.obtenerRegionesContinentales$();
+  public language = '';
+  public regions$ = this.wbs.obtenerRegionesContinentales$(this.language);
   continentes:Continente[] = [];
+
   imagenes = {
     1: '../../../assets/1.jpg',
     2: '../../../assets/2.jpg',
@@ -26,11 +28,12 @@ export class HomeComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    if (this.url.path().includes('/es/')) {
+      this.language = '/es/';
+    }
   }
 
-  constructor(private wbs: WorldBankService, private router: Router) {
-
-  }
+  constructor(private wbs: WorldBankService, private router: Router, private url:LocationStrategy) { }
 
   verRegion(id: string) {
     this.router.navigate(['/continente', id]);
