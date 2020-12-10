@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b3b3d65-61bd-4a03-9fce-507cd909c74e" name="Default Changelist" comment="" />
+    <list default="true" id="3b3b3d65-61bd-4a03-9fce-507cd909c74e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +117,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607602818328</updated>
-      <workItem from="1607602820807" duration="8530000" />
+      <workItem from="1607602820807" duration="9145000" />
     </task>
     <task id="LOCAL-00001" summary="Implementado store NgRX">
       <created>1607612399889</created>
