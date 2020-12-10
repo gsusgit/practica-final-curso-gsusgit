@@ -1,0 +1,5 @@
+<div class="text-center mt-1" *ngIf="customRegions">
+  <span *ngFor="let customRegion of customRegions | async" class="badge badge-secondary" style="margin: 3px;">
+    {{ customRegion.name }}
+  </span>
+</div>

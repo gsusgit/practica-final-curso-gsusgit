@@ -54,6 +54,23 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="89b5676e7e89822af7850fcbb23900868436ec8e" datatype="html">
+        <source>Add your own region</source>
+        <target>Añade tu propio continente</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/custom-region/add-custom-region/add-custom-region.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0db9bd73334578305268033abdc9b7d459e387a6" datatype="html">
+        <source>Type name and press ENTER</source>
+        <target>Escribe nombre y pulsa ENTER</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/custom-region/add-custom-region/add-custom-region.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Type name and press ENTER</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -53,7 +53,7 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 
 ## Plus
 
-- Almacén centralizado del estado mediante **_NgRx_**.
+- Almacén centralizado del estado mediante **_NgRx_**. [ _app website -> custom-region y store_ ] :heavy_check_mark:
 
 - Características **_PWA_** :heavy_check_mark:
 
@@ -75,3 +75,5 @@ Explorar la información abierta y disponible en el [API del Banco Mundial](http
 - Iframe que muestra mapa con ubicación aproximada del país
 
 - Bootstrap + Diseño Responsive
+
+- Despliegue en servidor propio [http://devtool.es/worldbank](http://devtool.es/worldbank)

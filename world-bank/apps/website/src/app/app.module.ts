@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DataModule } from '@world-bank/shared/data';
@@ -10,6 +9,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { customRegionsReducer } from './store/customregion.reducer';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, FooterComponent],
@@ -19,7 +22,16 @@ import { environment } from '../environments/environment';
     DataModule,
     HttpClientModule,
     PagesModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
+    StoreModule.forRoot({customRegions: customRegionsReducer}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
+    EffectsModule.forRoot([]),
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,13 @@
+<div class="text-center">
+  <h4 i18n>Add your own region</h4>
+  <div class="input-group">
+    <input i18n type="text"
+           class="input-group
+           text-center"
+           placeholder="Type name and press ENTER"
+           i18n-placeholder="Type name and press ENTER"
+           #name
+           (keyup.enter)="addCustomRegion(name.value)"
+           [(ngModel)]="regionName">
+  </div>
+</div>
