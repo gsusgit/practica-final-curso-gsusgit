@@ -23,7 +23,7 @@ export class PaisComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.wbs.obtenerInfoPais$(params.id).subscribe(resp => {
         this.pais = resp[0];
-        this.mapSrc = `https://maps.google.com/maps?q=${this.pais.latitude},${this.pais.longitude}&z=4&output=embed`;
+        this.mapSrc = `https://maps.google.com/maps?q=${this.pais.latitude},${this.pais.longitude}&z=1&output=embed`;
         setTimeout(() => {
           this.cargando = false;
         }, 1500);
